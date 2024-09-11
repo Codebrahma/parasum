@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Paragraph Summarizer",
+    "version": "1.0",
+    "description": "Summarizes paragraphs using GPT",
+    "permissions": ["activeTab", "storage"],
+    "host_permissions": ["https://api.openai.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "options_page": "options.html"
+  }
